@@ -30,7 +30,7 @@ export const POST = async req => {
   existingUser.passwordResetToken = passwordResetToken;
   existingUser.passwordResetExpiry = passwordResetExpires;
   
-  const resetUrl = `http://localhost:3000/reset-password/${resetToken}`;
+  const resetUrl = `${process.env.BASE_RESET_TOKEN_URL}/reset-password/${resetToken}`;
   const EMAIL = process.env.MAIL_USERNAME;
 
   const transporter = await createTransporter();
