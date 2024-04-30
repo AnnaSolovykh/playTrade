@@ -7,7 +7,7 @@ import { Box, Button, useTheme, Grid } from "@mui/material";
 
 export default function Home() {
   const router = useRouter();
-  const theme = useTheme(); // Access the theme
+  const theme = useTheme();
 
   return (
     <Grid container direction="column">
